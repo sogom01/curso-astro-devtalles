@@ -1,0 +1,26 @@
+---
+import Navabar from "../components/Navabar.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout tittle="About Page">
+  <h1 id="time"></h1>
+  <h2>About Page</h2>
+</Layout>
+
+<script>
+  const time = document.querySelector("#time") as HTMLParagraphElement;
+
+  time.innerText = `La hora es: ${new Date().toLocaleTimeString()}`;
+</script>
+<style>
+  html {
+    background-color: black;
+  }
+  h1 {
+    text-align: center;
+    color: yellowgreen;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+</style>
